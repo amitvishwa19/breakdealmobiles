@@ -2,10 +2,10 @@ import styles from "./style";
 import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Home from './pages/Home';
-import About from "./pages/about";
-import Product from "./pages/product";
-import NotFound from "./pages/4044Notfound";
+import Home from '../src/pages/Home';
+import About from "../src/pages/about";
+import Product from "../src/pages/product";
+import NotFound from "../src/pages/4044Notfound";
 
 const App = () => {
   return (

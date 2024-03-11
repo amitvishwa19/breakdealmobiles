@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from "../style";
 import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "../components";
-import { useResolvedPath } from 'react-router-dom';
+//import { useResolvedPath } from 'react-router-dom';
 
 export default function Product() {
-    const path = useResolvedPath()
+    //const path = useResolvedPath()
 
 
 
