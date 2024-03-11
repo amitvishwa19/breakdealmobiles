@@ -1,6 +1,8 @@
 import styles from "../style";
 import { discount, robot, pro_max } from "../assets";
 import GetStarted from "./GetStarted";
+import { Link } from "react-router-dom";
+
 
 const Hero = () => {
   return (
@@ -20,12 +22,12 @@ const Hero = () => {
             <span className="text-gradient">Generation</span>{" "}
           </h1>
           <div className="ss:flex hidden md:mr-4 mr-0">
-            <GetStarted />
+            <Link to={'/product'}><GetStarted /></Link>
           </div>
         </div>
 
         <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-          Refubrished MObiles.
+          Refubrished Mobiles.
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
           Our team of experts uses a methodology to identify the best refubrished mobile for you
@@ -43,7 +45,8 @@ const Hero = () => {
       </div>
 
       <div className={`ss:hidden ${styles.flexCenter}`}>
-        <GetStarted />
+
+        <Link to={'/product'}><GetStarted /></Link>
       </div>
     </section>
   );
