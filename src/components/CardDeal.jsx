@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { card, ph_3 } from "../assets";
 import styles, { layout } from "../style";
 import Button from "./Button";
@@ -12,7 +13,8 @@ const CardDeal = () => (
         With BreakdealsMoble you can trust on Quality and Genuine product
       </p>
 
-      <Button styles={`mt-10`} />
+
+      <Link to={'/product'}><Button styles={`mt-10`} /></Link>
     </div>
 
     <div className={layout.sectionImg}>

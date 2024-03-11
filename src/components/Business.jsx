@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
@@ -29,7 +30,8 @@ const Business = () => (
         Purana phone use karke ho gaye ho pareshan? Exchange offer ke liye idhar udhar mat jao. Check BreakdealsMobile and get the best price for your old phone
       </p>
 
-      <Button styles={`mt-10`} />
+
+      <Link to={'/product'}><Button styles={`mt-10`} /></Link>
     </div>
 
     <div className={`${layout.sectionImg} flex-col`}>

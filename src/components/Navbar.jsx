@@ -12,14 +12,16 @@ const Navbar = () => {
 
 
   const getRoute = () => {
-
+    //console.log('path', path.pathname)
   }
 
-  useEffect(() => {
 
 
-
-  }, [path])
+  const setPath = (link) => {
+    console.log('link', link)
+    console.log('path', path.pathname)
+    //path === link ? setActive(path) : ''
+  }
 
 
 
@@ -32,12 +34,12 @@ const Navbar = () => {
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${path === nav.title ? "text-white" : "text-dimWhite"
+            className={`font-poppins font-normal cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
               } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
-            onClick={() => setActive(nav.title)}
+
           >
 
-            <Link to={`${nav.link}`} >{nav.title}</Link>
+            <Link to={`${nav.link}`} onClick={() => { setPath(nav.link) }}>{nav.title}</Link>
           </li>
         ))}
       </ul>
