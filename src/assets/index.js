@@ -24,8 +24,10 @@ import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
 import logo_dark from './logo_dark.png'
-import logo_light from './logo_light.png'
-
+import logo_light from './logo_light.png';
+import pro_max from './14_pro_max.webp';
+import ph_2 from './ph_2.png';
+import ph_3 from './ph_3.png';
 
 export {
   logo_dark,
@@ -55,4 +57,7 @@ export {
   people01,
   people02,
   people03,
+  pro_max,
+  ph_2,
+  ph_3
 };

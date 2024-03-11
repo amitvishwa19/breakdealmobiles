@@ -12,8 +12,7 @@ const Testimonials = () => (
       </h2>
       <div className="w-full md:mt-0 mt-6">
         <p className={`${styles.paragraph} text-left max-w-[450px]`}>
-          Everything you need to accept card payments and grow your business
-          anywhere on the planet.
+          Upgraded to the IPhone 14 Pro MAx: Awesome Device. Sold my old OnePlus 6 on BreakdealsMobile: Even More Awesome Experience
         </p>
       </div>
     </div>
