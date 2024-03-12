@@ -7,7 +7,7 @@ import { Link, useResolvedPath } from "react-router-dom";
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
-  const path = useResolvedPath()
+  const path = useResolvedPath().pathname
 
 
 
@@ -31,17 +31,18 @@ const Navbar = () => {
       <Link to={'/'}><img src={logo_dark} alt="hoobank" className="w-[220px] h-[25px]" /></Link>
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-        {navLinks.map((nav, index) => (
-          <li
-            key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
-              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
-
-          >
-
-            <Link to={`${nav.link}`} onClick={() => { setPath(nav.link) }}>{nav.title}</Link>
-          </li>
-        ))}
+        <li className={`font-poppins font-normal cursor-pointer text-[16px] mr-10 ${path === '/' ? "text-white" : "text-dimWhite"} `} >
+          <Link to='/' onClick={() => { }}>Home</Link>
+        </li>
+        <li className={`font-poppins font-normal cursor-pointer text-[16px] mr-10 ${path === '/product' ? "text-white" : "text-dimWhite"} `} >
+          <Link to='/product' onClick={() => { }}>Product</Link>
+        </li>
+        <li className={`font-poppins font-normal cursor-pointer text-[16px] mr-10 ${path === '/about' ? "text-white" : "text-dimWhite"} `} >
+          <Link to='/about' onClick={() => { }}>About</Link>
+        </li>
+        <li className={`font-poppins font-normal cursor-pointer text-[16px] mr-10 ${path === '/contact' ? "text-white" : "text-dimWhite"} `} >
+          <Link to='/contact' onClick={() => { }}>Contact</Link>
+        </li>
       </ul>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -57,17 +58,24 @@ const Navbar = () => {
             } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
-                  } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-              //onClick={() => }
-              >
 
-                <Link to={`${nav.link}`} >{nav.title}</Link>
-              </li>
-            ))}
+
+            <li className={`font-poppins font-normal cursor-pointer text-[16px] mb-4 ${path === '/' ? "text-white" : "text-dimWhite"} `} >
+              <Link to='/' onClick={() => { }}>Home</Link>
+            </li>
+            <li className={`font-poppins font-normal cursor-pointer text-[16px] mb-4 ${path === '/product' ? "text-white" : "text-dimWhite"} `} >
+              <Link to='/product' onClick={() => { }}>Product</Link>
+            </li>
+            <li className={`font-poppins font-normal cursor-pointer text-[16px] mb-4 ${path === '/about' ? "text-white" : "text-dimWhite"} `} >
+              <Link to='/about' onClick={() => { }}>About</Link>
+            </li>
+            <li className={`font-poppins font-normal cursor-pointer text-[16px] mb-4 ${path === '/contact' ? "text-white" : "text-dimWhite"} `} >
+              <Link to='/contact' onClick={() => { }}>Contact</Link>
+            </li>
+
+
+
+
           </ul>
         </div>
       </div>

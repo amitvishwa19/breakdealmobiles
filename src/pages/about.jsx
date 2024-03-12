@@ -11,9 +11,15 @@ export default function About() {
                 </div>
             </div>
 
-            <div className={`bg-primary ${styles.flexStart}`}>
-                <div className={`${styles.boxWidth}`}>
-                    <Hero />
+            <div className='p-8'>
+                <div className={`bg-primary ${styles.flexStart}`}>
+                    <div className={`${styles.boxWidth}`}>
+                        <CTA />
+                    </div>
+                </div>
+
+                <div>
+
                 </div>
             </div>
 

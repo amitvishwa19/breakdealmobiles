@@ -2,6 +2,7 @@ import React from 'react'
 import styles from "../style";
 import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "../components";
 import { discount, robot, pro_max } from "../assets";
+import { quotes } from "../assets";
 //import { useResolvedPath } from 'react-router-dom';
 
 export default function Product() {
@@ -21,7 +22,7 @@ export default function Product() {
 
             <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
                 <div className={`${styles.boxWidth}`}>
-                    <div className='columns-4 p-8'>
+                    <div className='md:columns-4 p-8'>
                         <ProductCard name='IPhone 10' orignal='14000' ourprice='60000' />
                         <ProductCard name='IPhone 10 A' orignal='14000' ourprice='60000' />
                         <ProductCard name='IPhone 11' orignal='14000' ourprice='60000' />
@@ -34,6 +35,8 @@ export default function Product() {
                         <ProductCard name='IPhone 10 A' orignal='14000' ourprice='60000' />
                         <ProductCard name='IPhone 11' orignal='14000' ourprice='60000' />
                         <ProductCard name='IPhone 12' orignal='14000' ourprice='60000' />
+
+
                     </div>
                 </div>
             </div>
@@ -52,18 +55,18 @@ export default function Product() {
 
 function ProductCard({ name, orignal, ourprice }) {
     return (
-        <div className="">
+        <div className="feedback-card font-poppins rounded-lg">
             <div className='flex flex-col justify-center -md p-4'>
-                <div className='flex rounded-md relative mb-4 p-4 text-gray-100'>
+                <div className='flex rounded-md relative mb-4  text-gray-100 '>
                     <img src={pro_max} alt="" className='w-40 h-40 ' />
 
                     <div className='flex flex-col gap-4'>
-                        <span className='text-xl font-semibold'>{name}</span>
+                        <span className='text-lg font-semibold'>{name}</span>
                         <span className='flex line-through bg-red-400 items-center justify-center rounded-lg p-1'>
                             Rs {orignal}
                         </span>
 
-                        <span className='flex  bg-green-400 items-center justify-center rounded-lg p-1'>
+                        <span className='flex  bg-green-400 items-center justify-center rounded-lg p-1 '>
                             Rs {ourprice}
                         </span>
                     </div>
@@ -77,4 +80,3 @@ function ProductCard({ name, orignal, ourprice }) {
         </div>
     )
 }
-
