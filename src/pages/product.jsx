@@ -4,8 +4,7 @@ import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testi
 import { discount, robot, pro_max } from "../assets";
 import { quotes } from "../assets";
 import { mobiles } from '@/constants';
-import { InfiniteMovingCards } from '@/components/ui/InfiniteMovingCards ';
-import { HoverEffect } from '@/components/ui/HoverEffect ';
+
 import { BackgroundGradient } from '@/components/ui/BackgroundGradient';
 //import { useResolvedPath } from 'react-router-dom';
 
