@@ -2,15 +2,48 @@ import React, { useState } from 'react'
 import styles from "../style";
 import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "../components";
 import { Loader } from 'lucide-react';
-//import { toast } from 'sonner';
+import { Toaster, toast } from 'sonner';
+import axios from 'axios';
+//import { sendEmail } from '@/utils/mailer';
+
+
+
 
 export default function Contact() {
     const [formData, setFormData] = useState({ mobile: '', email: '', message: '' })
     const [processing, setProcessing] = useState(false)
 
-    const handleFormSubmit = () => {
+    const handleFormSubmit = async () => {
+
+        //const mailUrl = 'https://www.devlomatix.online/api/v1/admin/mail'
+
+
+        try {
+            setProcessing(true)
+            const mailUrl = 'http://localhost:3000/api/v1/admin/mail'
+
+            await axios.get(mailUrl, {
+                headers: {
+                    "Cache-Control": "no-cache",
+                    "Content-Type": "application/x-www-form-urlencoded",
+                }
+            })
+                .then((res) => {
+                    console.log(res)
+                })
+        } catch (error) {
+
+        } finally {
+            setProcessing(false)
+        }
+
+        //if (formData.mobile.length > 12 || formData.mobile.length < 12) return toast.error('Please  enter a valid mobile number')
+        //if (!formData.email) return toast.error('Email is missing')
+
+        // sendEmail(formData.email, 'inquiry')
+
         //setProcessing(true)
-        console.log(formData)
+        //console.log(formData)
         //toast.success('Your Inquiry submited , we will connect you shortly')
     }
 
@@ -39,11 +72,12 @@ export default function Contact() {
                         <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
 
                         <div>
-                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Mobile</label>
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Mobile (with country code)</label>
                             <input
                                 disabled={processing}
                                 value={formData.mobile}
-                                type="text" id="mobile"
+                                type="number"
+                                id="mobile"
                                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                                 placeholder="Mobile numbe with country code"
                                 onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
@@ -84,7 +118,7 @@ export default function Contact() {
                 </div>
             </div>
 
-
+            <Toaster />
         </div>
 
 

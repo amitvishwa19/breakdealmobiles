@@ -38,7 +38,7 @@ export default function Product() {
 
                                     </div>
                                 </div>
-                                <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-4 p-2'>
+                                <div className='grid sm:grid-cols-2 md:grid-cols-5 gap-5 p-2'>
                                     {
 
                                         item.variant.map((model, index) => {
