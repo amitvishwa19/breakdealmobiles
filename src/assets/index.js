@@ -28,6 +28,8 @@ import logo_light from './logo_light.png';
 import pro_max from './14_pro_max.webp';
 import ph_2 from './ph_2.png';
 import ph_3 from './ph_3.png';
+import ip_11 from './ip11.png';
+
 
 export {
   logo_dark,
@@ -59,5 +61,6 @@ export {
   people03,
   pro_max,
   ph_2,
-  ph_3
+  ph_3,
+  ip_11
 };

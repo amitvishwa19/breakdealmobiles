@@ -1,5 +1,7 @@
 import styles from "../style";
 import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "../components";
+import { AppCarousel } from "@/components/AppCarousel";
+
 
 const Home = () => {
     return (
@@ -10,7 +12,12 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className={`bg-primary ${styles.flexStart}`}>
+            <div className={`bg-primary`}>
+                <AppCarousel />
+            </div>
+
+
+            <div className={`bg-primary ${styles.flexStart} `}>
                 <div className={`${styles.boxWidth}`}>
                     <Hero />
                 </div>

@@ -14,6 +14,7 @@ export default function About() {
             <div className='p-8'>
                 <div className={`bg-primary ${styles.flexStart}`}>
                     <div className={`${styles.boxWidth}`}>
+                        <CardDeal />
                         <CTA />
                     </div>
                 </div>
